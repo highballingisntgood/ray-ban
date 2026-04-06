@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #0a0a0a, #121212, #1a1a1a);
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, .4);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, .1);
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.1rem;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.nav-links a:hover {
+    color: #00ffe1;
+}
+
+.hamburger {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+.container {
+    padding: 100px 20px 40px 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+h2 {
+    margin-top: 0;
+    color: #00ffe1;
+    font-size: 1.2rem;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+.feature {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.feature img {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+}
+
+.feature-text {
+    flex: 1;
+}
+
+footer {
+    padding: 40px;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    margin-top: 50px;
+}
+
+footer p {
+    color: #666;
+    margin: 5px 0;
+}
+
+footer a {
+    color: #00ffe1;
+    text-decoration: none;
+    margin: 0 5px;
+    transition: 0.3s;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: 260px;
+        background: #111;
+        flex-direction: column;
+        padding: 120px 30px;
+        gap: 30px;
+        transition: 0.3s ease;
+        box-shadow: -5px 0 20px rgba(0, 0, 0, 0.4);
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+}
+
+@media (min-width: 768px) {
+    nav {
+        padding: 20px 50px;
+    }
+
+    .container {
+        padding: 120px 50px;
+    }
+
+    h1 {
+        font-size: 2.4rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    .feature {
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .feature img {
+        width: 50px;
+        height: 50px;
+    }
+
+}
+
+
